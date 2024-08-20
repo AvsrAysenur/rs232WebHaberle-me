@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS232 Mesajlaşma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #mesaj {
+            width: 300px;
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .sent {
+            align-self: flex-end;
+            background-color: #d4edda;
+        }
+
+        .received {
+            align-self: flex-start;
+            background-color: #cce5ff;
+        }
+
+        .timestamp {
+            font-size: 0.75em;
+            color: #6c757d;
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RS232 Mesajlaşma Arayüzü</h1>
+    <input type="text" id="mesaj" placeholder="Mesajınızı girin">
+    <button onclick="mesajGonder()">Gönder</button>
+
+    <h2>Mesajlar</h2>
+    <div id="messages" class="messages"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
